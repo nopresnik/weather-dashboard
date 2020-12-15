@@ -1,13 +1,12 @@
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
   font-family: degular-text, sans-serif;
-  background-color: #fafafa;
+  background-color: rgb(250, 250, 250);
   padding-top: 5px;
 }
 
@@ -30,19 +29,12 @@ section {
 
 .row {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
 }
 
 .main {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  flex-grow: 1;
   margin-left: -1px;
   padding: 5px;
 }
@@ -55,18 +47,18 @@ section {
 
 .nav-menu {
   list-style-type: none;
-}
 
-.nav-menu li {
-  border: 1px solid lightgray;
-  padding: 10px;
-  margin: 0px 0px -1px 0px;
-  border-radius: 3px;
-}
+  li {
+    border: 1px solid lightgray;
+    padding: 10px;
+    margin: 0px 0px -1px 0px;
+    border-radius: 3px;
+  }
 
-.nav-menu a {
-  text-decoration: none;
-  color: black;
+  a {
+    text-decoration: none;
+    color: black;
+  }
 }
 
 .card {
@@ -78,13 +70,12 @@ section {
 
 .forecast-card {
   margin-right: 5px;
-}
 
-.forecast-card:last-of-type {
-  margin-right: -0px;
+  &:last-of-type {
+    margin-right: -0px;
+  }
 }
 
 .full-width {
   width: 100%;
 }
-/*# sourceMappingURL=style.css.map */
