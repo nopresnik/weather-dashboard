@@ -37,6 +37,18 @@ section {
   flex-grow: 1;
   margin-left: -1px;
   padding: 5px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.city-overview {
+  flex-grow: 1;
+  margin-bottom: 5px;
+}
+
+.forecast-overview {
+  margin-bottom: 0 !important;
 }
 
 .side-bar {
@@ -64,7 +76,6 @@ section {
 .card {
   border: 1px solid lightgray;
   border-radius: 3px;
-  margin-bottom: 5px;
   padding: 5px;
 }
 
