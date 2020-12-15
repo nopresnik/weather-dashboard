@@ -14,9 +14,11 @@ function renderSearchHistory() {
     return item;
   };
 
-  getSearchHistory().forEach((item) => {
-    searchMenu.append(listItem(item));
-  });
+  if (getSearchHistory()) {
+    getSearchHistory().forEach((item) => {
+      searchMenu.append(listItem(item));
+    });
+  }
 }
 
 function renderSelectedCity() {
