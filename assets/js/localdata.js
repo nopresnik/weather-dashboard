@@ -12,6 +12,9 @@ function getSelectedCity() {
 function saveSearch(search) {
   var search = search.toLowerCase().trim();
   var history = [];
+
+  setSelectedCity(search);
+
   if (getSearchHistory() !== null) {
     history = getSearchHistory();
   }
