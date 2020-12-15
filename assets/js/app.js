@@ -32,14 +32,17 @@ $(document).ready(function () {
   }
 
   function saveSearch(search) {
+    var search = search.toLowerCase().trim();
     var history = [];
     if (getSearchHistory() !== null) {
       history = getSearchHistory();
     }
 
-    if (history.length >= 8) history.pop();
-    history.unshift(search);
-    localStorage.setItem("search-history", JSON.stringify(history));
+    if (!history.includes(search)) {
+      if (history.length >= 8) history.pop();
+      history.unshift(search);
+      localStorage.setItem("search-history", JSON.stringify(history));
+    }
 
     console.log(history);
   }
