@@ -59,6 +59,7 @@ section {
       -ms-flex-positive: 1;
           flex-grow: 1;
   margin-bottom: 5px;
+  padding: 15px !important;
 }
 
 .forecast-overview {
@@ -69,6 +70,10 @@ section {
   width: 25%;
   min-width: 220px;
   padding: 5px;
+}
+
+.side-bar form {
+  margin-bottom: 15px;
 }
 
 .nav-menu {
@@ -99,6 +104,10 @@ section {
 
 .forecast-card:last-of-type {
   margin-right: -0px;
+}
+
+.forecast-card .card-stats {
+  margin-top: 15px;
 }
 
 .full-width {

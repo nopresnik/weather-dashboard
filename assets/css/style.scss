@@ -45,6 +45,7 @@ section {
 .city-overview {
   flex-grow: 1;
   margin-bottom: 5px;
+  padding: 15px !important;
 }
 
 .forecast-overview {
@@ -55,6 +56,10 @@ section {
   width: 25%;
   min-width: 220px;
   padding: 5px;
+
+  form {
+    margin-bottom: 15px;
+  }
 }
 
 .nav-menu {
@@ -84,6 +89,10 @@ section {
 
   &:last-of-type {
     margin-right: -0px;
+  }
+
+  .card-stats {
+    margin-top: 15px;
   }
 }
 
