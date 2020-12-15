@@ -6,8 +6,6 @@ $(document).ready(function () {
       saveSearch($("#search-input").val());
 
       $("#search-input").val("");
-
-      renderSearchHistory();
     }
   });
 
@@ -51,6 +49,8 @@ $(document).ready(function () {
       if (history.length >= 8) history.pop();
       history.unshift(search);
       localStorage.setItem("search-history", JSON.stringify(history));
+
+      renderSearchHistory();
     }
 
     console.log(history);
