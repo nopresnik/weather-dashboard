@@ -18,6 +18,11 @@ $(document).ready(function () {
     var listItem = function (name) {
       var item = $('<a href="#">');
       item.append($("<li>").text(name));
+      item.data("name", name);
+      item.on("click", function (e) {
+        e.preventDefault();
+        setSelectedCity($(this).data("name"));
+      });
 
       return item;
     };
@@ -25,6 +30,10 @@ $(document).ready(function () {
     getSearchHistory().forEach((item) => {
       searchMenu.append(listItem(item));
     });
+  }
+
+  function renderSelectedCity() {
+    $("#sel-city-name").text(getSelectedCity());
   }
 
   function getSearchHistory() {
@@ -47,8 +56,21 @@ $(document).ready(function () {
     console.log(history);
   }
 
+  function getSelectedCity() {
+    var city = localStorage.getItem("selected-city");
+
+    // Return the selected city or default to Melbourne if none.
+    return city ? city : "Melbourne";
+  }
+
+  function setSelectedCity(city) {
+    localStorage.setItem("selected-city", city);
+    renderSelectedCity();
+  }
+
   function init() {
     renderSearchHistory();
+    renderSelectedCity();
   }
 
   init();
