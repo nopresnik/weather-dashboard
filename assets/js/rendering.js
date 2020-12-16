@@ -30,7 +30,11 @@ function renderForecast() {
   container.empty();
   for (var i = 0; i < 5; i++) {
     var card = $("<div>").addClass("card forecast-card full-width");
-    var dayTitle = $("<h4>").text("Thursday");
+    var dayTitle = $("<h4>").text(
+      moment()
+        .add(i + 1, "days")
+        .format("dddd")
+    );
 
     var stats = $("<div>").addClass("card-stats");
     stats.append($("<p>").text("Temp: xx"));
