@@ -24,3 +24,19 @@ function renderSearchHistory() {
 function renderSelectedCity() {
   $("#sel-city-name").text(getSelectedCity());
 }
+
+function renderForecast() {
+  var container = $("#forecast-cards");
+  container.empty();
+  for (var i = 0; i < 5; i++) {
+    var card = $("<div>").addClass("card forecast-card full-width");
+    var dayTitle = $("<h4>").text("Thursday");
+
+    var stats = $("<div>").addClass("card-stats");
+    stats.append($("<p>").text("Temp: xx"));
+    stats.append($("<p>").text("Humidity: xx"));
+
+    card.append(dayTitle, stats);
+    container.append(card);
+  }
+}

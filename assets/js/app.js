@@ -14,6 +14,7 @@ $("#search-form").on("submit", function (e) {
 function init() {
   renderSearchHistory();
   renderSelectedCity();
+  renderForecast();
 }
 
 init();
