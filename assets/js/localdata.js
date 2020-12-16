@@ -31,4 +31,5 @@ function saveSearch(search) {
 function setSelectedCity(city) {
   localStorage.setItem("selected-city", city);
   renderSelectedCity();
+  renderForecast();
 }
