@@ -14,5 +14,9 @@ function getForecast(city) {
 }
 
 function parseForecast(data) {
-  console.log(data);
+  var forecast = data.list;
+  forecast.forEach((item) => {
+    console.log(item.dt_txt, item.main.temp)
+  })
+  // console.log(forecast);
 }
