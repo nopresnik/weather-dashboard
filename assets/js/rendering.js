@@ -21,14 +21,18 @@ function renderSearchHistory() {
   }
 }
 
-function renderSelectedCity() {
+function renderSelectedCity(data) {
   $("#sel-city-name").text(getSelectedCity());
+  $("#sel-city-temp").text(Math.round(data.temp) + "˚");
+  $("#sel-city-humidity").text("Humidity: " + data.humidity + "%");
+  $("#sel-city-wind").text("Wind Speed: " + Math.round(data.wind_speed) + "KM/H");
+  $("#sel-city-uv").text("UV Index: " + data.uvi);
 }
 
-function renderForecast() {
+function renderForecast(data) {
   var container = $("#forecast-cards");
   container.empty();
-  for (var i = 0; i < 5; i++) {
+  for (var i = 1; i <= 5; i++) {
     var card = $("<div>").addClass("card forecast-card full-width");
     var dayTitle = $("<h4>").text(
       moment()
@@ -37,8 +41,8 @@ function renderForecast() {
     );
 
     var stats = $("<div>").addClass("card-stats");
-    stats.append($("<p>").text("Temp: xx"));
-    stats.append($("<p>").text("Humidity: xx"));
+    stats.append($("<p>").text(`Temp: ${Math.round(data[i].temp.max)}˚/${Math.round(data[i].temp.min)}˚`));
+    stats.append($("<p>").text(`Humidity: ${Math.round(data[i].humidity)}%`));
 
     card.append(dayTitle, stats);
     container.append(card);

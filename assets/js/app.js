@@ -10,8 +10,9 @@ $("#search-form").on("submit", function (e) {
 
 function init() {
   renderSearchHistory();
-  renderSelectedCity();
-  renderForecast();
+  // renderSelectedCity();
+  // renderForecast();
+  setSelectedCity(getSelectedCity());
 }
 
 init();
