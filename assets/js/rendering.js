@@ -37,7 +37,7 @@ function renderForecast(data) {
     var card = $("<div>").addClass("card forecast-card full-width");
     var dayTitle = $("<h4>").text(
       moment()
-        .add(i + 1, "days")
+        .add(i, "days")
         .format("dddd")
     );
 
