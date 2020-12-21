@@ -31,7 +31,6 @@ function saveSearch(search) {
 function setSelectedCity(city) {
   localStorage.setItem("selected-city", city);
   getWeather(city, function(res) {
-    console.log(res)
     renderSelectedCity(res.current);
     renderForecast(res.daily);
   });
