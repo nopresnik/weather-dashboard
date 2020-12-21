@@ -51,6 +51,10 @@ section {
   h1 {
     text-transform: capitalize;
   }
+
+  img {
+    margin: -25px;
+  }
 }
 
 .forecast-overview {
@@ -97,9 +101,9 @@ section {
     margin-right: -0px;
   }
 
-  .card-stats {
-    margin-top: 15px;
-  }
+  // .card-stats {
+  //   margin-top: 15px;
+  // }
 }
 
 .full-width {

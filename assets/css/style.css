@@ -67,6 +67,10 @@ section {
   text-transform: capitalize;
 }
 
+.city-overview img {
+  margin: -25px;
+}
+
 .forecast-overview {
   margin-bottom: 0 !important;
 }
@@ -110,10 +114,6 @@ section {
 
 .forecast-card:last-of-type {
   margin-right: -0px;
-}
-
-.forecast-card .card-stats {
-  margin-top: 15px;
 }
 
 .full-width {

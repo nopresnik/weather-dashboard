@@ -22,6 +22,7 @@ function renderSearchHistory() {
 }
 
 function renderSelectedCity(data) {
+  $("#sel-city-icon").attr("src", `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`)
   $("#sel-city-name").text(getSelectedCity());
   $("#sel-city-temp").text(Math.round(data.temp) + "˚");
   $("#sel-city-humidity").text("Humidity: " + data.humidity + "%");
@@ -41,6 +42,7 @@ function renderForecast(data) {
     );
 
     var stats = $("<div>").addClass("card-stats");
+    stats.append($("<img>").attr("src", `http://openweathermap.org/img/wn/${data[i].weather[0].icon}.png`));
     stats.append($("<p>").text(`Temp: ${Math.round(data[i].temp.max)}˚/${Math.round(data[i].temp.min)}˚`));
     stats.append($("<p>").text(`Humidity: ${Math.round(data[i].humidity)}%`));
 
