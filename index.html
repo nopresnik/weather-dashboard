@@ -1,54 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Dashboard</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="https://use.typekit.net/xpl2gdp.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
 
-  <link rel="stylesheet" href="https://use.typekit.net/xpl2gdp.css" />
-  <link rel="stylesheet" href="assets/css/style.css" />
-</head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Weather Dashboard</h1>
+      </header>
+      <div class="row">
+        <section class="side-bar">
+          <form id="search-form">
+            <h4>Search for a city:</h4>
+            <input type="text" name="City" id="search-input" />
+            <button>Search</button>
+          </form>
 
-<body>
-  <div class="container">
-    <header>
-      <h1>Weather Dashboard</h1>
-    </header>
-    <div class="row">
-      <section class="side-bar">
-        <form id="search-form">
-          <h4>Search for a city:</h4>
-          <input type="text" name="City" id="search-input" />
-          <button>Search</button>
-        </form>
+          <div class="recent-searches">
+            <h4>Recent Searches:</h4>
+            <ul class="nav-menu"></ul>
+          </div>
+        </section>
 
-        <h4>Recent Searches:</h4>
-        <ul class="nav-menu"></ul>
-      </section>
-
-      <section class="main">
-        <div class="card city-overview">
-          <img id="sel-city-icon" />
-          <h1 id="sel-city-name"></h1>
-          <h1 id="sel-city-temp">34˚</h1>
-          <p id="sel-city-humidity">Humidity: xx%</p>
-          <p id="sel-city-wind">Wind Speed: xx KM/H</p>
-          <p id="sel-city-uv">UV Index: xx</p>
-        </div>
-        <div class="card forecast-overview">
-          <h1>5-Day Forecast:</h1>
-          <div class="row" id="forecast-cards"></div>
-        </div>
-      </section>
+        <section class="main">
+          <div class="card city-overview">
+            <img id="sel-city-icon" />
+            <h1 id="sel-city-name"></h1>
+            <h1 id="sel-city-temp">34˚</h1>
+            <p id="sel-city-humidity">Humidity: xx%</p>
+            <p id="sel-city-wind">Wind Speed: xx KM/H</p>
+            <p id="sel-city-uv">UV Index: xx</p>
+          </div>
+          <div class="card forecast-overview">
+            <h1>5-Day Forecast:</h1>
+            <div class="row" id="forecast-cards"></div>
+          </div>
+        </section>
+      </div>
     </div>
-  </div>
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-  <script src="assets/js/remotedata.js"></script>
-  <script src="assets/js/rendering.js"></script>
-  <script src="assets/js/localdata.js"></script>
-  <script src="assets/js/app.js"></script>
-</body>
-
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="assets/js/remotedata.js"></script>
+    <script src="assets/js/rendering.js"></script>
+    <script src="assets/js/localdata.js"></script>
+    <script src="assets/js/app.js"></script>
+  </body>
 </html>
