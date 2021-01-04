@@ -42,7 +42,7 @@ function renderForecast(data) {
     );
 
     var stats = $("<div>").addClass("card-stats");
-    stats.append($("<img>").attr("src", `https://openweathermap.org/img/wn/${data[i].weather[0].icon}.png`));
+    stats.append($("<img>").attr("src", `https://openweathermap.org/img/wn/${data[i].weather[0].icon}@2x.png`));
     stats.append($("<p>").text(`Temp: ${Math.round(data[i].temp.max)}˚/${Math.round(data[i].temp.min)}˚`));
     stats.append($("<p>").text(`Humidity: ${Math.round(data[i].humidity)}%`));
 

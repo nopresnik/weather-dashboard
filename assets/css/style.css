@@ -116,6 +116,10 @@ section {
   margin-right: -0px;
 }
 
+.forecast-card img {
+  margin: -25px;
+}
+
 .full-width {
   width: 100%;
 }
